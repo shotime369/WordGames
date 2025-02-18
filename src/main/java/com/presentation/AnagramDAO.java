@@ -9,7 +9,7 @@ public class AnagramDAO {
     public static String[] getRandomAnagram() {
         try (Connection conn = DatabaseConnection.getConnection()){
             if (conn != null){
-                System.out.println("Connection successful!");
+                //System.out.println("Connection successful!");
                 String sql = "SELECT word, scrambled_word FROM words ORDER BY RAND() LIMIT 1";
                 try( PreparedStatement stmt = conn.prepareStatement(sql);
                      ResultSet rs = stmt.executeQuery()) {

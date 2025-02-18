@@ -10,7 +10,7 @@ public class DatabaseConnection {
     private static final String PASSWORD = "1234";
 
     public static Connection getConnection() throws SQLException {
-        System.out.println("Trying to connect");
+        //System.out.println("Trying to connect");
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
